@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <div class="mainContainer">
+    <div class="container">
+
+      <input readonly id="inputClass" type="text" placeholder="00" />
+      <br />
+
+      <button class="sqrButton" onclick="handleClick('+')">+</button>
+      <button class="longButton" onclick="handleClick('7')">7</button>
+      <button class="longButton" onclick="handleClick('8')">8</button>
+      <button class="longButton" onclick="handleClick('9')">9</button>
+      <br />
+
+      <button class="sqrButton" onclick="handleClick('-')">-</button>
+      <button class="longButton" onclick="handleClick('4')">4</button>
+      <button class="longButton" onclick="handleClick('5')">5</button>
+      <button class="longButton" onclick="handleClick('6')">6</button>
+      <br />
+
+      <button class="sqrButton" onclick="handleClick('*')">*</button>
+      <button class="longButton" onclick="handleClick('1')">1</button>
+      <button class="longButton" onclick="handleClick('2')">2</button>
+      <button class="longButton" onclick="handleClick('3')">3</button>
+      <br />
+
+      <button class="sqrButton" onclick="handleClick('/')">/</button>
+      <button class="longButton" onclick="handleClick('%')">%</button>
+      <button class="longButton" onclick="handleClick('0')">0</button>
+      <button class="longButton" onclick="handleClick('.')">.</button>
+      <br />
+      <button style="background-color:rgb(183, 208, 196); color: white" class="sqrButton"
+        onclick="handleClick(null)">C</button>
+      <button class="equalToButton" onclick="handleSubmit()">=</button>
+
+    </div>
+
+  </div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        
+    <title>HOME</title>
+    <link rel="stylesheet" href="./landing.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <div>
+                <h2>Requirements Specification</h2>
+            </div>
+            <a class="active" href="#product">Product</a>
+            <input type="text" placeholder="Search..">
+            <a href="#contact">About Us</a>
+            <a href="#about">Help</a>
+           <button class="btn btn-primary logout">logout</button> 
+        </div>
+        <p class="alert alert-success"> </p>
+        <div class="carousal">
+            <img class="mySlides" src="../product_image/88099.jpg" style="width:100%">
+            <img class="mySlides" src="../product_image/88081.jpg" style="width:100%">
+            <img class="mySlides" src="../product_image/88090.jpg" style="width:100%">
+            <img class="mySlides" src="../product_image/88096.jpg" style="width:100%">
+    
+            <button class="carousal-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="carousal-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    
+        <div class="product">
+            <h1 class="product-name">Product Name</h1>
+            <div>
+                <section id="introblocks">
+                    <div> <a class="imgover" href=""><img src="../product_image/88099.jpg" alt=""></a>
+    
+                        <h6 class="heading">Mollis suscipit</h6>
+                        <p>Eu adipiscing sit amet ante donec vulputate magna duis posuere tellus vel fringilla auctor nisi
+                            arcu.</p>
+                    </div>
+    
+                    <div><a class="imgover" href=""><img src="../product_image/88081.jpg" alt=""></a>
+    
+                        <h6 class="heading">Vestibulum maecenas</h6>
+                        <p>Urna at congue lectus nisi ac neque suspendisse vitae sapien eu mi placerat tincidunt sed eget
+                            elit in.</p>
+                    </div>
+                    <div>
+                        <a class="imgover" href=""><img src="../product_image/88090.jpg" alt=""></a>
+    
+                        <h6 class="heading">Pellentesque enim</h6>
+                        <p>Imperdiet pede sit amet elit aenean sollicitudin eros quis cursus feugiat lacus diam tempor
+                            tortor vel.</p>
+                    </div>
+                </section>
+    
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    
+    cookies = document.cookie.split("; ");
+    username = '';
+    password = '';
+    for (e of cookies){
+        if (e.split("=")[0]=='username'){username=e.split("=")[1]}
+        else if (e.split("=")[0]=='password'){password=e.split("=")[1]}
+    }
+    if (username == '' && password == ''){
+        window.location.href ='/signin.html';
+    }
+    else{
+        document.querySelector('p').innerText=`Welcome ${username}`}
+    console.log(cookies)
+
+
+    document.querySelector('.logout').addEventListener('click',function(){
+        console.log('logout btn clicked')
+        document.cookie = `username=${username}; expires=Thu, 18 Dec 2013 12:00:00 UTC`;
+        document.cookie = `password=${password}; expires=Thu, 18 Dec 2013 12:00:00 UTC`;
+        window.location.href ='/signin.html';
+    })
+
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</html>

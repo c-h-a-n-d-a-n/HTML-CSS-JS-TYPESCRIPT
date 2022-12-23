@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/reservation.css">
+</head>
+
+<body>
+    <h1>Railway Reservation System</h1>
+    
+    <div class="container">
+        <form action="">
+            <h2>Travel Reservation Form</h2>
+            <div class="form-item"><!--Full Name-->
+                <label for="name">Full Name*</label>
+                <input id="name" type="text" required placeholder="FirstName LastName">
+            </div>
+            <div class="form-item"><!--Email-->
+                <label for="email">Email*</label>
+                <input id="email" type="text" required placeholder="Email Address">
+            </div>
+            <div class="form-item"><!--Location-->
+                <label for="location-select">Select Tour Package*:</label>
+                <select name="location-select" id="location-select" required>
+                    <option value=" " selected>Select Location</option>
+                    <option value="goa">Goa</option>
+                    <option value="kerla">Kerla</option>
+                    <option value="jammu">Jammu</option>
+                    <option value="kasmir">Kasmir</option>
+                    <option value="Bihar">Bihar</option>
+                </select>
+            </div>
+            <div class="form-item"><!--Arrival Date-->
+                <label for="arrival-date">Arrival Date*</label>
+                <input id="arrival-date" type="text" required>
+            </div>
+            <div class="form-item"><!--Number of Preson-->
+                <label for="no-of-person">Number of Preson*</label>
+                <input id="no-of-person" type="number" required min="0">
+            </div>
+            <div class="form-item"><!--Service-->
+                <label for="service">What would you want to avail*</label>
+                <div><!--Boarding-->
+                    <input id="boarding" type="checkbox" name="boarding">
+                    <label for="boarding">Boarding</label>
+                </div>
+                <div><!--Sight-Seeing-->
+                    <input id="sight-seeing" type="checkbox" name="sight-seeing">
+                    <label for="sight-seeing">Sight-Seeing</label>
+                </div>
+                <div><!--Fooding-->
+                    <input id="fooding" type="checkbox" name="fooding">
+                    <label for="fooding">Fooding</label>
+                </div>
+            </div>
+            <div class="form-item"><!--Discount-->
+                <label for="discount">Discount</label>
+                <input id="discount" type="text">  
+            </div>
+            <div class="form-item"><!--Term and Condition-->
+                <label for="discount">Term and Condition</label>
+                <div>
+                    <input type="radio" required name="terms" value="agree">
+                    <label for="agree">Agree</label>
+                </div>
+                <div>
+                    <input type="radio" required name="terms" value="disagree">
+                    <label for="disagree">Disagree</label>
+                </div>
+            </div>
+            <div class="form-item"><!--Submit-->
+                <input type="submit" value="Complete reservation">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+  .topnav {
+    overflow: hidden;
+    background-color: #0f0e0e;
+    display: flex;
+    justify-content: end;
+    color: aliceblue;
+  }
+  .topnav h2{
+    padding-right: 300px;
+    padding-left: 20px;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: rgb(231, 223, 223);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(224, 216, 216);
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-size: 17px;
+  }
+  
+  .mySlides{
+    display:none;
+  }
+  .carousal button{
+    height: 100px;
+    width: 50px;
+    color: rgb(239, 236, 236);
+    background-color: #0f0e0e;
+  }
+  .carousal img{
+    height: 640px;
+    width: 700px;
+  }
+  .carousal-left{
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%)
+}
+.carousal-right{
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
+}
+
+#introblocks{
+    padding-top: 30px;
+    display:block; 
+    position:relative;
+    /* margin:-280px 0 0 0; */
+    /* z-index:1; */
+    text-align:center;
+    display: flex;
+    flex-direction: row-reverse;
+
+    
+    }
+
+.imgover img{
+    height: 300px;
+}
+
+#introblocks div{
+    /* max-height:0; */
+    overflow:hidden; 
+    
+    border-style: solid ;
+    border-style: groove;
+  border-width: 7px;
+  border-color: rgb(10, 10, 10);
+  padding: 10px;
+  margin: 10px; 
+
+}
+#introblocks .heading{
+    /* padding:px 0;  */
+    font-size:1.2rem; 
+    color: rgb(5, 5, 5);
+    /* font-weight:700;  */
+    line-height:1;
+}
+#introblocks div p{
+    /* padding:0 0 20px 0; */
+    color: rgb(16, 16, 17);
+}
+.product-name{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
